@@ -292,19 +292,16 @@ All cordova plugins are configured in [mobile/config.xml](mobile/config.xml) and
 
 In order to run the iOS project that was created from step #8a, we need to first create the `provisioning file,app IDs and certificates` from `Xcode`. You need to have an apple login which is free if you have an iOS device. Go to `Xcode>Preferences>Accounts` and add your apple login. This will create a `Personal Team` profile which can be used to sign your project.
 
-If you get `error: exportArchive: No profiles for ‘com.watson.vehicledamageanalyzer’ were found`. You need to select project in Xcode  and change the `bundle identifier` to a unique one. Also change the widget `id` in [mobile/config.xml](mobile/config.xml) to the same one in Xcode and unique
+If you get `error: exportArchive: No profiles for ‘com.watson.vehicledamageanalyzer’ were found`. You need to select project in Xcode  and change the `bundle identifier` to a unique one. Also change the widget `id` in [mobile/config.xml](mobile/config.xml) to the same one in Xcode
 
-## 8c. Deploy the app to iOS device or emulator
+for example: change `com.watson.vehicle-damage-analyzer` to your new bundle identifier name `com.foo.vehicle-damage-analyzer`
+
+## 8c. Deploy the app to iOS device
 Deploy the app using the following. NOTE: make sure you device in unlocked when deploying.
 
 To deploy the app on a connected iOS device:
 
-    `$ cordova run ios --device`
-    
-To deploy the app on a default iOS emulator:
-
-    `$ cordova emulate ios`
-
+    `$ cordova run ios --device`    
 
 # Sample Output
 
